@@ -54,7 +54,7 @@ def StudentList_f(requests):
                 'status': 'Fail',
                 'Reason': serializer.errors,
                 'Remark': 'Send valid data'
-            }
+                }
             return Response(json_data, status=stus.HTTP_300_MULTIPLE_CHOICES)
     except Exception as e:
         print("Error --------:", e)
@@ -63,5 +63,5 @@ def StudentList_f(requests):
             'status': 'Fail',
             'Reason': e,
             'Remark': 'landed in exception',
-        }
+            }
         raise APIException(json_data, status=stus.HTTP_500_INTERNAL_SERVER_ERROR)
