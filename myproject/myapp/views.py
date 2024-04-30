@@ -2,10 +2,10 @@ from django.shortcuts import render
 from .queries import *
 from .serializers import *
 from rest_framework.response import Response
-from rest_framework import request, status as stus
+from rest_framework import  status as stus
 from rest_framework.decorators import api_view
 from rest_framework.exceptions import  APIException
-
+import requests
 import boto3
 import secrets
 
@@ -17,19 +17,18 @@ aws_secret_access_key= "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
 @api_view(['POST'])
 def StudentList_f(requests):
     try:
-        serializer = StudentList_s(data=request.data)
+        serializer = StudentList_s(data=requests.data)
         if serializer.is_valid():
-            bi=request.FILES.get("ProfileImage")
-            if bi:
-                filee = request.FILES.get("ProfileImage")
-                content_type = s3_content_type(filee)
-                hex = secrets.token_hex(16)
-                directory = 'zappas3bucket/Myfolder/{}{}'.format(hex,filee)
-                s3.put_object(Bucket='zappas3bucket', Key=directory, Body=filee,ContentType=content_type)
-                ProfileImagePath = "https://zappas3bucket.s3.ap-southeast-1.amazonaws.com/"+directory
-            else:
-                ProfileImagePath= None
-            
+            # bi=request.FILES.get("ProfileImage")
+            # if bi:
+            #     filee = request.FILES.get("ProfileImage")
+            #     content_type = s3_content_type(filee)
+            #     hex = secrets.token_hex(16)
+            #     directory = 'zappas3bucket/Myfolder/{}{}'.format(hex,filee)
+            #     s3.put_object(Bucket='zappas3bucket', Key=directory, Body=filee,ContentType=content_type)
+            #     ProfileImagePath = "https://zappas3bucket.s3.ap-southeast-1.amazonaws.com/"+directory
+            # else:
+            #     ProfileImagePath= None
             Data = StudentList_q()
             if Data:
                     json_data = {
