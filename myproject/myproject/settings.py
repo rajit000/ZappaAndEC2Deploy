@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'LocalDb',
         'USER': 'admin',
         'PASSWORD': 'Admin123',
-        'HOST': 'database-1.cbii2ywq83bh.ap-southeast-1.rds.amazonaws.com',
+        'HOST': 'database-1.chw8eomwmjjs.ap-south-1.rds.amazonaws.com',
         'PORT': '3306', 
     },
     'Mydb': {
@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': 'LocalDb',
         'USER': 'admin',
         'PASSWORD': 'Admin123',
-        'HOST': 'database-1.cbii2ywq83bh.ap-southeast-1.rds.amazonaws.com',
+        'HOST': 'database-1.chw8eomwmjjs.ap-south-1.rds.amazonaws.com',
         'PORT': '3306', 
     }
 
