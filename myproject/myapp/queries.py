@@ -56,7 +56,7 @@ def s3_content_type(file):
 
 def StudentList_q():
     with connections['Mydb'].cursor() as cursor:
-        resp = cursor.execute(""" Select Id, StudentUUID, first_name, last_name, DOB, gender, email, phone, 
+        resp = cursor.execute(""" Select Id, StudentUUID, first_name, last_name, DOB, gender, email, phone, ProfileImage, 
         address, city, state, zip_code, country, nationality, guardian_name, guardian_relationship, guardian_phone, 
         admission_date, IsDeleted from LocalDb.Student where IsDeleted =0 """)
         if resp and cursor.rowcount:

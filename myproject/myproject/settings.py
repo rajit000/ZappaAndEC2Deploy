@@ -85,16 +85,16 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'LocalDb',
         'USER': 'admin',
-        'PASSWORD': 'Admin123',
-        'HOST': 'database-1.chw8eomwmjjs.ap-south-1.rds.amazonaws.com',
+        'PASSWORD': 'admin123',
+        'HOST': 'database-1.ctggyk2scjo0.ap-south-1.rds.amazonaws.com',
         'PORT': '3306', 
     },
     'Mydb': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'LocalDb',
         'USER': 'admin',
-        'PASSWORD': 'Admin123',
-        'HOST': 'database-1.chw8eomwmjjs.ap-south-1.rds.amazonaws.com',
+        'PASSWORD': 'admin123',
+        'HOST': 'database-1.ctggyk2scjo0.ap-south-1.rds.amazonaws.com',
         'PORT': '3306', 
     }
 
